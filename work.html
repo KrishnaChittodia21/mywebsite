@@ -17,7 +17,27 @@
     <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
     <link href="assets/css/material-kit.css" rel="stylesheet"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
+    <style>
+    .button {
+      display: inline-block;
+      text-decoration: none;
+      color: gray;
+    }
+    .hvr-float {
+  display: inline-block;
+  vertical-align: middle;
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  transition-duration: 0.3s;
+  transition-property: transform;
+  transition-timing-function: ease-out;
+}
+.hvr-float:hover,.hvr-float:focus,.hvr-float:active {
+  transform: translateY(-8px);
+}
+    </style>
 </head>
 <body>
 <body class="profile-page">
@@ -64,30 +84,16 @@
         <div class="profile-content">
             <div class="container">
                 <div class="row">
-                    <div class="profile">
-                        <div class="avatar">
-                            <img src="assets/img/krishna.jpg" alt="Circle Image" class="img-circle img-responsive img-raised">
-                        </div>
-                        <div class="name">
-                            <h3 class="animated infinite flipInY">Krishna Chittodia</h3>
-                            <h6>Developer & Problem Solver</h6>
-                        </div>
-                    </div>
-                </div>
-                <div class="description text-center">
-                    <p>A coding hippie and more a problem solver....Always excited to work on new technology still learning a few things from a vast universe of knowledge out there.</p>
-                </div>
-
-                <div class="row">
                     <div class="col-md-6 col-md-offset-3">
-                        <div class="profile-tabs">
+                        <div class="profile-tabs" style="margin-top:0px">
                             <div class="nav-align-center">
                                 <ul class="nav nav-pills" role="tablist">
-                                    <li>
-                                        <a href="javascript:void(0)" style="background-color:darkgrey">
-                                            <i class="material-icons">home</i>Home
-                                        </a>
-                                    </li>
+
+                                  <li>
+                                      <a href="Landingpage.html">
+                                          <i class="material-icons">home</i>Home
+                                      </a>
+                                  </li>
                                     <li>
                                         <a href="assets/krishnachittodia.10new.pdf" target="_blank" role="tab" data-toggle="tab">
                                             <i class="material-icons">get_app</i>
@@ -95,10 +101,10 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="work.html" role="tab" data-toggle="tab">
-                                            <i class="material-icons">library_books</i>
-                                            Work
-                                        </a>
+                                      <a href="javascript:void(0)" style="background-color:darkgrey" role="tab" data-toggle="tab">
+                                          <i class="material-icons">library_books</i>
+                                          Work
+                                      </a>
                                     </li>
                                     <li>
                                         <a href="#shows" role="tab" data-toggle="tab">
@@ -111,12 +117,27 @@
                                 <div class="tab-content gallery">
                                     <div class="tab-pane active" id="studio">
                                         <div class="row">
-                                            <div class="col-md-6">
-                                              <img src="assets/img/nodehero.png">
-                                            </div>
-                                            <div class="col-md-6">
-                                              <img src="assets/img/facebook-chatbot.png">
-                                            </div>
+                                              <div class="col-xs-4">
+                                                <a  href="https://www.facebook.com/Imkannu21" target="_blank" class="button hvr-float">
+                                                  <img src="assets/img/messenger.png">
+                                                  <b style="color:black" bold>Messenger chatbot</b><br>
+                                                  <i>scan through meseenger or simply click</i>
+                                                </a>
+                                              </div>
+                                              <div class="col-xs-4">
+                                                <a  href="https://www.facebook.com/Imkannu21" class="button hvr-float">
+                                                  <img src="assets/img/messenger.png">
+                                                  <b style="color:black" bold>Google Maps</b><br>
+                                                  <i>Simply click to explore</i>
+                                                </a>
+                                              </div>
+                                              <div class="col-xs-4">
+                                                <a  href="https://www.facebook.com/Imkannu21" class="button hvr-float">
+                                                  <img src="assets/img/messenger.png">
+                                                  <b style="color:black" bold>Chat Server</b><br>
+                                                  <i>Click to try</i>
+                                                </a>
+                                              </div>
                                         </div>
                                     </div>
                                 </div>
@@ -150,7 +171,11 @@
 
 
 </body>
-
+<script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();
+});
+</script>
 <!--   Core JS Files   -->
 <script src="../assets/js/jquery.min.js" type="text/javascript"></script>
 <script src="../assets/js/bootstrap.min.js" type="text/javascript"></script>
