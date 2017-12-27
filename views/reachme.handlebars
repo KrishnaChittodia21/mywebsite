@@ -103,6 +103,19 @@ font: 12px Arial, Helvetica, sans-serif;
         background: linear-gradient(to bottom, #2D77A2 5%, #337DA8 100%);
         background-color: #28739E;
     }
+    #map {
+      border: 6px solid #305A72;
+  border-radius: 6px 6px 6px 6px;
+  bottom: 0;
+  display: block;
+  height: 400px;
+  width:50%;
+  left: 0;
+  margin: 45px 10px 10px;
+  right: 0;
+  top: 0;
+  background-color:#eee;
+       }
     </style>
 
 </head>
@@ -166,9 +179,10 @@ font: 12px Arial, Helvetica, sans-serif;
                                         <a href="../Landingpage.html" style="color:#555555;font-size:24px">
                                             <i class="material-icons">home</i>Home
                                         </a>
-                                <div class="tab-content gallery" style="margin-top:0px">
+                                <div class="tab-content gallery" style="margin-top:0px;padding-bottom:0px">
                                   {{msg}}
                                   <h4>Fill in the enteries</h4>
+                                  <div>
                                   <form class="form-style-9 doit" method="POST" action="send">
                                     <p >
                                       <label class="mywid">Name</label>
@@ -195,13 +209,27 @@ font: 12px Arial, Helvetica, sans-serif;
                                     </p>
                                   </form>
                                 </div>
+                                </div>
+
                             </div>
                         </div>
+
                         <!-- End Profile Tabs -->
                     </div>
+
+                    </div>
+                    <div class="col-md-12">
+                          <div class="col-md-3" style="margin-top:180px">
+                          <p><b>Address : </b>R-8/101,<br>RajNagar<br>Ghaziabad,(U.P)-201002<p>
+                          <p><b>Phone no:</b>7503673841</p>
+                        </div>
+                          <div  class="col-md-9"style="float:left" id="map"></div>
+                      </div>
                 </div>
 
+
             </div>
+
         </div>
     </div>
 
@@ -216,6 +244,22 @@ font: 12px Arial, Helvetica, sans-serif;
 
 
 </body>
+<script>
+     function initMap() {
+       var uluru = {lat: 28.686841758592063, lng: 77.44783307144166};
+       var map = new google.maps.Map(document.getElementById('map'), {
+         zoom: 14,
+         center: uluru
+       });
+       var marker = new google.maps.Marker({
+         position: uluru,
+         map: map
+       });
+     }
+   </script>
+   <script async defer
+   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCyt2c6XgPC4GIktfi5MMMp0bcpIBN5FpA&callback=initMap">
+   </script>
 <script>
 $('.doit').addClass('animated bounceInLeft');
 
